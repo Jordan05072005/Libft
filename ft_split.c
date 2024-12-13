@@ -83,7 +83,7 @@ char	**ft_split(char *s, char c)
 			str_final[i_m] = malloc((strlen_char(c, s, i) + 1) * sizeof(char));
 			if (str_final[i_m] == NULL)
 				return (free_str(str_final), NULL);
-			ft_strlcpy(str_final[i_m++], &s[i], strlen_char(c, s, i) + 1);
+			ft_strlcpy(str_final[i_m++], &s[i], strlen_char(c, s, i));
 			i += strlen_char(c, s, i);
 		}
 		else
