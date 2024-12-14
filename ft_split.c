@@ -27,7 +27,7 @@ static int	strlen_char(char charset, char *str, int j)
 	while (str[i + j])
 	{
 		if (ft_is_sep(charset, str[i + j]))
-			return (i - 1);
+			return (i);
 		i++;
 	}
 	return (i);
@@ -82,7 +82,7 @@ char	**ft_split(char *s, char c)
 			if (str_final[i_m] == NULL)
 				return (free_str(str_final), NULL);
 			ft_strlcpy(str_final[i_m++], &s[i], strlen_char(c, s, i) + 1);
-			i += strlen_char(c, s, i) + 1;
+			i += strlen_char(c, s, i);
 		}
 		else
 			i++;
